@@ -1,10 +1,11 @@
-<h2>ログイン</h2>
+<h3>ログイン</h3>
 <p>会員の方はこちらからログイン</p>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
     <%= f.label :メールアドレス %>
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%#= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <input type="text" placeholder="sample@example.com" ></input>
   </div>
 <br>
   <div class="field">
@@ -19,5 +20,4 @@
   </div>
 <% end %>
 <p>会員登録がお済みでない方</p>
-<p>こちらから新規登録を行なってください。</p>
-<!--こちらをリンクにする-->
+<%= link_to "こちら", new_public_registration_path %>から新規登録を行なってください。

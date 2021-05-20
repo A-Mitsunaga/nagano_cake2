@@ -3,7 +3,9 @@
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
     <%= f.label :メールアドレス %>
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <input type="text" placeholder="sample@example.com" ></input>
+  </div>
+    <%#= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
   <!--アドレス欄の薄字がまだ-->
 <br>
